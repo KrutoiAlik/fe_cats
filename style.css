@@ -1,0 +1,38 @@
+@import url('src/Card/card.css');
+@import url('src/Popup/popup.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #c2c2c2;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.cards {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+    align-content: flex-start;
+}
