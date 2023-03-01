@@ -13,7 +13,6 @@ const createCatElement = (catDetails) => {
 
 const cardsContainer = document.querySelector('.cards');
 
-// Handle Form Submit
 const addForm = document.querySelector('.popup__add .form');
 addForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -44,16 +43,17 @@ addForm.addEventListener('submit', (e) => {
     popupAdd.close();
 })
 
-// Generate Cat Cards
 cats.forEach(catDetails => {
     const catElement = createCatElement(catDetails);
     cardsContainer.append(catElement.getElement());
 });
 
-// Add Click Events
 const popupAdd = new Popup('popup__add');
 
 document.querySelector('.cat__add').addEventListener('click', popupAdd.open.bind(popupAdd));
 
 document.querySelector('.popup.popup__add .popup__close').addEventListener('click', popupAdd.close.bind(popupAdd));
-document.querySelector('.popup.popup__edit .popup__close').addEventListener('click', popupAdd.close.bind(popupEdit));
+document.querySelector('.popup.popup__edit .popup__close').addEventListener('click', popupEdit.close.bind(popupEdit));
+
+popupAdd.setMouseDownListener();
+popupEdit.setMouseDownListener();
