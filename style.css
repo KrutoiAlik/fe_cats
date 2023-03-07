@@ -1,5 +1,6 @@
-@import url('src/Card/card.css');
-@import url('src/Popup/popup.css');
+@import url('src/components/Card/card.css');
+@import url('src/components/Popup/popup.css');
+@import url('src/components/Popup/rate.css');
 
 * {
     padding: 0;
@@ -26,7 +27,7 @@
 .container {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 .cards {

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.png">
     <script src="https://kit.fontawesome.com/fd738dc92a.js" crossorigin="anonymous"></script>
     <script src="index.js" type="module" defer></script>
 </head>
@@ -38,8 +39,8 @@
                     <input type="url" class="form__input" name="image" placeholder="Image Link">
 
                     <label class="form__checkbox-wrap">
-                        <input type="checkbox" name="favourite" class="form__checkbox">
-                        <span class="form__label">Favourite</span>
+                        <input type="checkbox" name="favorite" class="form__checkbox">
+                        <span class="form__label">Favorite</span>
                         <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
                     </label>
                 </div>
@@ -52,8 +53,82 @@
 
     <div class="popup popup__edit">
         <div class="popup__container">
+            <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="popup__title">Edit</h2>
+            <form class="form">
+                <div class="form__layout">
+                    <input type="number" class="form__input" name="id" min="1" required placeholder="Id">
+                    <input type="number" class="form__input" name="age" placeholder="Age">
+                    <input type="text" class="form__input" name="name" placeholder="Name">
+                    <input type="number" class="form__input" name="rate" placeholder="Rating (0-10)" min="0" max="10">
+                    <input type="url" class="form__input" name="image" placeholder="Image Link">
+
+                    <label class="form__checkbox-wrap">
+                        <input type="checkbox" name="favorite" class="form__checkbox">
+                        <span class="form__label">Favorite</span>
+                        <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
+                    </label>
+                </div>
+                <textarea name="description" class="form__input form__textarea" placeholder="Description"></textarea>
+                <button type="submit" class="form__btn btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup__read">
+        <div class="popup__container">
             <button class="popup__close btn popup__close_external"><i class="fa-solid fa-xmark"></i></button>
-            <img class="popup__image" src="" alt="catImg" />
+            <div class="popup__details">
+                <div class="img__container">
+                    <img class="popup__image" src="" alt="catImg" />
+                </div>
+                <div class="popup__fields">
+                    <button class="popup__edit btn popup__edit_external">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                    <button class="popup__delete btn popup__delete_external">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                    <h2 name="name"></h2>
+
+                    <h3><span name="age"></span> year(s)</h3>
+                    <span class="favorite" name="favorite"></span>
+                    <p name="description"></p>
+                    <div class="rate">
+                        <input type="radio" id="star10" name="rate" value="10" disabled />
+                        <label for="star10" title="text">10 stars</label>
+                        <input type="radio" id="star9" name="rate" value="9" disabled />
+                        <label for="star9" title="text">9 stars</label>
+                        <input type="radio" id="star8" name="rate" value="8" disabled />
+                        <label for="star8" title="text">8 stars</label>
+                        <input type="radio" id="star7" name="rate" value="7" disabled />
+                        <label for="star7" title="text">7 stars</label>
+                        <input type="radio" id="star6" name="rate" value="6" disabled />
+                        <label for="star6" title="text">6 stars</label>
+                        <input type="radio" id="star5" name="rate" value="5" disabled />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" disabled />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" disabled />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" disabled />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" disabled />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup__login">
+        <div class="popup__container">
+            <button class="popup__close btn popup__close_external"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="popup__title">Log in</h2>
+            <form class="form">
+                <input type="text" class="form__input" name="username" min="1" required placeholder="Username">
+                <button type="submit" class="form__btn btn">Log in</button>
+            </form>
         </div>
     </div>
 
